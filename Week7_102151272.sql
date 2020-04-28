@@ -1,4 +1,5 @@
-SELECT WNAME, ProjectTitle
+SELECT COUNT(*)
 FROM PROJECT P
 INNER JOIN WORKER W
-ON W.ProjCode = P.ProjCode;
+ON W.ProjCode = P.ProjCode
+GROUP BY P.ProjCode;
