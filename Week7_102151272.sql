@@ -1,15 +1,18 @@
+delete from worker;
 
-CREATE TABLE PROJECT (
-  ProjCode VARCHAR (30)
-, ProjectTitle VARCHAR(100)  
-, PRIMARY KEY (ProjCode) 
-);
-CREATE TABLE WORKER (
-  Wid  VARCHAR (30)
-, Wname  VARCHAR(30) 
-, Gender  VARCHAR(30)
-, ProjCode VARCHAR (30)
-, PRIMARY KEY (Wid)
-, FOREIGN KEY (ProjCode) REFERENCES PROJECT
-);
+delete from project;
 
+go
+
+INSERT INTO PROJECT (ProjCode, ProjectTitle) VALUES 
+('1', 'Project One'),
+('2', 'Project Two'),
+('3', 'Project Three');
+
+INSERT INTO WORKER (Wid, Wname, Gender, ProjCode) VALUES 
+('21', 'Dave Jones', 'M', '2'), 
+('22', 'Emma Quilt', 'F', '2'),
+('23', 'Fred Gingers', 'M', '1'),
+('24', 'Pat Smith', 'F', '2'),
+('40', 'Ben Gardiner', 'M', '3'),
+('41', 'Joel Anderson', 'M', '3');
