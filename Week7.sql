@@ -1,0 +1,13 @@
+CREATE TABLE PROJECT (
+  ProjCode VARCHAR (30)
+, ProjectTitle VARCHAR(100)  
+, PRIMARY KEY (ProjCode) 
+);
+CREATE TABLE WORKER (
+  Wid  VARCHAR (30)
+, Wname  VARCHAR(30) 
+, Gender  VARCHAR(30)
+, ProjCode VARCHAR (30)
+, PRIMARY KEY (Wid)
+, FOREIGN KEY (ProjCode) REFERENCES PROJECT
+);
