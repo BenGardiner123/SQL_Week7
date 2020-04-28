@@ -1,5 +1,4 @@
-select table_name from information_schema.tables;
-exec sp_columns project;
-select * from project;
-exec sp_columns worker;
-select * from worker;
+SELECT WNAME, ProjectTitle
+FROM PROJECT P
+INNER JOIN WORKER W
+ON W.ProjCode = P.ProjCode;
